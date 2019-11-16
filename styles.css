@@ -1,0 +1,10 @@
+div{
+  text-align: center;
+}
+canvas {
+    border: 3px solid;
+    margin: 35px;
+}
+p{
+  font-size: 75px;
+}
