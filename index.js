@@ -34,6 +34,7 @@ canvas.addEventListener("mousedown", (event) => {
       arr[x1][y1]=1;
       count++;
       flag=!flag;
+      document.getElementById("win").innerHTML="O";
     }
     else{
       context.beginPath();
@@ -42,6 +43,7 @@ canvas.addEventListener("mousedown", (event) => {
       arr[x1][y1]=0;
       count++;
       flag=!flag;
+      document.getElementById("win").innerHTML="X";
     }
       if(count>=5){
         x=1;
@@ -65,7 +67,7 @@ canvas.addEventListener("mousedown", (event) => {
           x=1;
         }
         if(x!==3){
-          big1:for(let i=0;i<3;i++){
+          big:for(let i=0;i<3;i++){
           let temp = arr[0][i];
           for(let j=1;j<3;j++){
             if(temp===arr[j][i])
@@ -78,7 +80,7 @@ canvas.addEventListener("mousedown", (event) => {
                 document.getElementById("win").innerHTML="Player 2 wins!";
               }
               game = false;
-              break big1;
+              break big;
             }
           }
           y=1;
